@@ -25,6 +25,8 @@ package-lock.json
 package.json
 fixtures/
 examples/
+Test.js
+LoginPage.js
 learn_test/
 Pharma WEB 14/
 plugins/
@@ -36,5 +38,4 @@ node_modules/
 cypress.json
 package-lock.json
 package.json
-Test.js
-LoginPage.js
+
