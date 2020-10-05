@@ -74,3 +74,31 @@ describe('TestcaseSearch',function()
     
 
 })    
+
+     /*  it('PolygonVoronogo', ()=>
+    { 
+        cy.get('[ui-sref="layerConfig"]').click().wait(2000)
+        cy.get('[ng-model="layerConfig.layer.voronoi.enable"]').click().should('be.checked')
+        cy.get('[data-id="voronoiLayerCompanyTypes"]').click()
+        cy.get('#bs-select-13-1').click()
+        cy.get('[data-id="voronoiLayerCompanyTypes"]').click()
+        cy.get('[data-id="voronoiLayerPolygons"]').click()
+        cy.get('.bs-container > .dropdown-menu.open > .bs-actionsbox > .btn-group > .bs-deselect-all').click()
+        cy.get('#bs-select-15-9').click()
+        cy.get('[data-id="voronoiLayerPolygons"]').click()
+        cy.get('[ng-disabled="!layerForm.$valid"]').click()
+        cy.get('#loader > .modal-dialog').should('not.be.visible')
+        cy.get('[ng-click="layerConfig.layer.save();"]').click().wait(5000)
+        //cy.get('#loader > .modal-dialog').should('not.be.visible')
+        cy.get('[ng-click="dialog.deferred.resolve()"]').click()
+        cy.get('#loader > .modal-dialog').should('not.be.visible')
+
+        
+
+
+
+
+
+
+    
+    })    */

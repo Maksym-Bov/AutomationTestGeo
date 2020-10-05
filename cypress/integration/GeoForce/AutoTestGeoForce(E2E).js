@@ -11,8 +11,11 @@ describe('TestcaseSearch',function()
 {
 
     const Button = new ButtonGeoForce ()
+
     const login = new LoginPagePharma ()
+
     const grid = new Agrid ()
+
     beforeEach(function ()
     {
         cy.fixture('options-testGeoForce').then(function(data)
@@ -39,16 +42,11 @@ describe('TestcaseSearch',function()
                 login.email(this.data.email)
                 login.password(this.data.password)
                 login.submit()
-               // login.service(this.data.service)
-
-             }
-             else
-             {
-             
              }
         })
 
     })
+
     it('first load Etms',function  ()
     {
             //ожидание скрытия модального окна
@@ -78,8 +76,7 @@ describe('TestcaseSearch',function()
         cy.get('[data-id=filtersRegions]').click()
 
         cy.get('.bs-container > .dropdown-menu.open > .bs-actionsbox > .btn-group > .bs-deselect-all').click().should('contain','Отменить все')
-
-            
+    
         if (this.data.country = "ua" )
         {
             cy.get('.bs-container > .dropdown-menu.open >').contains(this.data.KievRegion).click()
@@ -102,6 +99,7 @@ describe('TestcaseSearch',function()
             cy.get('[data-id=filtersRegions]').click()
             
     })
+
     it('Select-CompanyTypes',function() //выбор типов организаций ФО
     {
         cy.get('[ng-show="main.companyTypes.length"]').should('contain','Типы организаций')
@@ -121,13 +119,19 @@ describe('TestcaseSearch',function()
         cy.get(`[ng-show="main.filtersSelected.indexOf(\'companyTypes\') != -1"]`).click()
 
         Button.applyButtonFO()
-    }) 
-    it('ZoomMap', function() // маштаб на карте организаций ФО 
-        {
-            cy.get('[ng-click="main.zoomMap.in()"]').should('be.visible').dblclick()
-            cy.get('[data-original-title="Масштабировать по всем организациям"]').should('be.visible')
-        })          
+    })
 
+    it('ZoomMap', function() // маштаб на карте организаций ФО 
+    {
+            
+            cy.get('[ng-click="main.zoomToCompanies(); $event.stopPropagation();"]').should('be.visible').dblclick()
+            cy.get('[data-original-title="Масштабировать по всем организациям"]').should('be.visible')
+    })
+    it('ButtonresetFO', ()=>
+    {
+
+        cy.get('#filtersApplyCollapse > .pull-right').click()
+    })              
 
     it('Polygonbrush', ()=> 
     {
@@ -137,14 +141,28 @@ describe('TestcaseSearch',function()
         cy.get('svg > g > path:nth-child(2)')// полигон на карте 
         .click()
 
-        Button.BrashButtonDone().wait(2000)
-        cy.get('[ng-show="grid.morionLoading"]').should('not.be.visiable')
+        Button.BrashButtonDone()
+        cy.wait(30000)
+          
+    })
+
+    it('Agrid CompanyCount', () =>
+    {
+        grid.AgridCompany()
+    })
+
+    it('Agrid Turnover', () =>
+    {
         grid.AgridTurnover()
 
+    }) 
 
-        
+   it('Agrid MSSKU', () =>
+    {
+        grid.AgridMSSKUandColumns()
 
-    })   
+    })
+
     it('PolygonErase', () =>
     {
         Button.BrashButton()
@@ -155,11 +173,29 @@ describe('TestcaseSearch',function()
 
         Button.BrashButtonDone()
        
+    })
 
-    })    
+    
+    it('Agrid CompanyCount Zero', () =>
+    {
+        grid.AgridCompanyZero()
+    })
+
+    it('Agrid Turnover Zero', () =>
+    {
+        grid.AgridTurnoverZero()
+
+    }) 
+
+   it('Agrid MSSKU Zero', () =>
+    {
+        grid.AgridMSSKUandColumnsZero()
+    
+    })   
 
 
-   
+
+
 
 
 
@@ -171,33 +207,7 @@ describe('TestcaseSearch',function()
     
     }) 
 
-      /*  it('PolygonVoronogo', ()=>
-    { 
-        cy.get('[ui-sref="layerConfig"]').click().wait(2000)
-        cy.get('[ng-model="layerConfig.layer.voronoi.enable"]').click().should('be.checked')
-        cy.get('[data-id="voronoiLayerCompanyTypes"]').click()
-        cy.get('#bs-select-13-1').click()
-        cy.get('[data-id="voronoiLayerCompanyTypes"]').click()
-        cy.get('[data-id="voronoiLayerPolygons"]').click()
-        cy.get('.bs-container > .dropdown-menu.open > .bs-actionsbox > .btn-group > .bs-deselect-all').click()
-        cy.get('#bs-select-15-9').click()
-        cy.get('[data-id="voronoiLayerPolygons"]').click()
-        cy.get('[ng-disabled="!layerForm.$valid"]').click()
-        cy.get('#loader > .modal-dialog').should('not.be.visible')
-        cy.get('[ng-click="layerConfig.layer.save();"]').click().wait(5000)
-        //cy.get('#loader > .modal-dialog').should('not.be.visible')
-        cy.get('[ng-click="dialog.deferred.resolve()"]').click()
-        cy.get('#loader > .modal-dialog').should('not.be.visible')
-
-        
-
-
-
-
-
-
-    
-    })    */
+ 
     
        
         

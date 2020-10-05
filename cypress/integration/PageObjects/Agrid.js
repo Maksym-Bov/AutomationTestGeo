@@ -34,46 +34,109 @@ class Agrid
     
     }
 
-    AgridMSSKU()
+    AgridMSSKUandColumns()
     {
+        // Set Columns Agrid
+        cy.get('[data-target="#configGridColumn"]').click()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-body').should('be.visible')
+
+        cy.get(':nth-child(1) > .node > .row-checkbox > .ng-pristine').uncheck()
+        cy.get(':nth-child(4) > .node > .row-checkbox > .ng-pristine').check()
+        cy.get(':nth-child(5) > tr > .row-checkbox > .ng-pristine ').uncheck()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+        cy.get('#loader > .modal-dialog').should('not.be.visible').wait(2000) 
 
         cy.get('.ag-row-first > div:nth-child(8)')
         .then((geoObject) =>
         {
            const  ValueMSSKU =geoObject[0].innerText
-           cy.contains('.ag-row-first > div:nth-child(8)',ValueMSSKU)
-            
+           const IntValueMSSKU = parseInt(ValueMSSKU,10)
+          cy.get('.ag-row-first > div:nth-child(8)').should('contain',IntValueMSSKU)
         })
+        cy.get('[data-target="#configGridColumn"]').click()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-body').should('be.visible')
+
+        cy.get(':nth-child(1) > .node > .row-checkbox > .ng-valid').check()
+        cy.get(':nth-child(4) > .node > .row-checkbox > .ng-valid').uncheck()
+        cy.get(':nth-child(5) > tr > .row-checkbox > .ng-valid').check()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
         
-       
+        cy.get('#loader > .modal-dialog').should('not.be.visible').wait(2000) 
+        
+    }
+
+    AgridMSSKUandColumnsZero()
+    {
+        // Set Columns Agrid
+        cy.get('[data-target="#configGridColumn"]').click()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-body').should('be.visible')
+
+        cy.get(':nth-child(1) > .node > .row-checkbox > .ng-valid').uncheck()
+        cy.get(':nth-child(4) > .node > .row-checkbox > .ng-valid').check()
+        cy.get(':nth-child(5) > tr > .row-checkbox > .ng-valid').uncheck()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+        cy.get('#loader > .modal-dialog').should('not.be.visible').wait(2000) 
+
+        cy.get('.ag-row-first > div:nth-child(8)').should('contain',0)
+          
+        cy.get('[data-target="#configGridColumn"]').click()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-body').should('be.visible')
+
+        cy.get(':nth-child(1) > .node > .row-checkbox > .ng-valid').check()
+        cy.get(':nth-child(4) > .node > .row-checkbox > .ng-valid').uncheck()
+        cy.get(':nth-child(5) > tr > .row-checkbox > .ng-valid').check()
+
+        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
+        
+        cy.get('#loader > .modal-dialog').should('not.be.visible').wait(2000) 
+        
     }
 
     AgridTurnover()
     {
         
-        /*cy.get('[data-target="#configGridColumn"]').click()
-        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-body').should('be.visible')   
-        cy.get(':nth-child(1) > .node > .row-checkbox > .ng-pristine').check()
-        cy.get(':nth-child(2) > .node > .row-checkbox > .ng-pristine').uncheck()
-        cy.get(':nth-child(3) > .node > .row-checkbox > .ng-pristine').uncheck()
-        cy.get(':nth-child(4) > .node > .row-checkbox > .ng-pristine').uncheck()
-        cy.get(':nth-child(5) > tr > .row-checkbox > .ng-pristine ').check()
-        cy.get(':nth-child(6) > .node > .row-checkbox > .ng-pristine').uncheck()
-        cy.get(':nth-child(7) > .node > .row-checkbox > .ng-pristine').uncheck()
-        cy.get(':nth-child(8) > .node > .row-checkbox > .ng-pristine').uncheck()
-        cy.get('#configGridColumn > .modal-dialog > .modal-content > .modal-footer > .btn-primary').click()
-        cy.get('#loader > .modal-dialog').should('not.be.visible').wait(2000)*/
-       // 
-        //cy.get('[ng-show="grid.morionLoading"]').should('not.be.visiable')
+       
 
         cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value')
         .then( (geoObject) =>
         {    
+            const Turnover = geoObject[0].innerText
            
-            const Turnover = geoObject[0].innerText 
-            if(Turnover > 0){ cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value').should('contain',Turnover)}
-            else { cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value').should('contain',0)}
+            cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value').should('contain',Turnover)
         })
+    
+    }
+    AgridTurnoverZero()
+    {
+        
+        cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value').should('contain',0)
+    
+    }
+
+    AgridCompany()
+    {
+        cy.get('.ag-row-position-absolute.ag-row-first > div:nth-child(5)')
+        .then((geoObject)=>
+        {
+
+            const CountCompany = geoObject[0].innerText
+           
+            cy.get('.ag-row-position-absolute.ag-row-first > div:nth-child(5)').should('contain',CountCompany)
+        })
+
+    }
+
+    AgridCompanyZero()
+    {
+
+        cy.get('.ag-row-position-absolute.ag-row-first > div:nth-child(5)').should('contain',0)
     
     }
     
