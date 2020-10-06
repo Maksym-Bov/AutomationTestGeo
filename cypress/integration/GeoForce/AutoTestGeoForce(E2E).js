@@ -50,8 +50,6 @@ describe('TestcaseSearch',function()
     it('first load Etms',function  ()
     {
             //ожидание скрытия модального окна
-        cy.get('#loader > .modal-dialog').should('be.visible')   
-
         cy.get('#loader > .modal-dialog').should('not.be.visible')
     })
            
@@ -124,8 +122,8 @@ describe('TestcaseSearch',function()
     it('ZoomMap', function() // маштаб на карте организаций ФО 
     {
             
-            cy.get('[ng-click="main.zoomToCompanies(); $event.stopPropagation();"]').should('be.visible').dblclick()
-            cy.get('[data-original-title="Масштабировать по всем организациям"]').should('be.visible')
+        cy.get('[ng-click="main.zoomToCompanies(); $event.stopPropagation();"]').should('be.visible').dblclick()
+        cy.get('[data-original-title="Масштабировать по всем организациям"]').should('be.visible')
     })
     it('ButtonresetFO', ()=>
     {

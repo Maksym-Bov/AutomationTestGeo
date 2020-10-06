@@ -104,12 +104,12 @@ class Agrid
         
        
 
-        cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value')
+        cy.get('.ag-row-first > div:nth-child(6)')
         .then( (geoObject) =>
         {    
             const Turnover = geoObject[0].innerText
            
-            cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value').should('contain',Turnover)
+            cy.get('.ag-row-first > div:nth-child(6)').should('contain',Turnover)
         })
     
     }
