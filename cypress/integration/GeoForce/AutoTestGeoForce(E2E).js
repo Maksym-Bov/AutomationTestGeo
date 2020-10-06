@@ -1,5 +1,7 @@
 
 
+/// test Git command 
+
 import LoginPagePharma from '../PageObjects/LoginPharmaHRM'
 
 import ButtonGeoForce from '../PageObjects/ButtonGeoForce'
