@@ -1,6 +1,6 @@
 
 
-/// test Git command 
+
 
 import LoginPagePharma from '../PageObjects/LoginPharmaHRM'
 
