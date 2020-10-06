@@ -116,7 +116,7 @@ class Agrid
     AgridTurnoverZero()
     {
         
-        cy.get('.ag-row-first > div:nth-child(6) > div > div.div-percent-value').should('contain',0)
+        cy.get('.ag-row-first > div:nth-child(6)').should('contain',0)
     
     }
 

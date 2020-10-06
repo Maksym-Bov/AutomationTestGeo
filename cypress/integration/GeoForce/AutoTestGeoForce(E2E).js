@@ -50,6 +50,7 @@ describe('TestcaseSearch',function()
     it('first load Etms',function  ()
     {
             //ожидание скрытия модального окна
+        
         cy.get('#loader > .modal-dialog').should('not.be.visible')
     })
            
