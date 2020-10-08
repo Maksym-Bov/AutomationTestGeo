@@ -102,8 +102,6 @@ class Agrid
     AgridTurnover()
     {
         
-       
-
         cy.get('.ag-row-first > div:nth-child(6)')
         .then( (geoObject) =>
         {    

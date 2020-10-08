@@ -78,7 +78,7 @@ describe('TestcaseSearch',function()
 
         cy.get('.bs-container > .dropdown-menu.open > .bs-actionsbox > .btn-group > .bs-deselect-all').click().should('contain','Отменить все')
     
-        if (this.data.country = "ua" )
+        if (this.data.country === "ua" )
         {
             cy.get('.bs-container > .dropdown-menu.open >').contains(this.data.KievRegion).click()
 
@@ -87,7 +87,7 @@ describe('TestcaseSearch',function()
             cy.get('.bs-container > .dropdown-menu.open >').contains(this.data.LvivRegion).click()
         }
 
-        else if (this.data.country = "ru" )
+        else if (this.data.country === "ru" )
         {
             cy.get('.bs-container > .dropdown-menu.open >').contains(this.data.MoscowCity).click()
 

@@ -23,6 +23,35 @@ class  ButtonGeoForce
         const buttoncontain = cy.contains('[ui-sref="grid"]','Done')
         const button = cy.get('[ui-sref="grid"]').click()
     }
+    ButtonConfigPV ()
+    {
+        
+        const button = cy.get('[ui-sref="layerConfig"]').click()
+    }
+    CheckboxConfigPV (check)
+    {
+       if(check === 1)
+       {
+            const checkbox = cy.get('[ng-model="layerConfig.layer.voronoi.enable"]').check() 
+       }
+       else if(check === 0)
+       {
+            const checkbox = cy.get('[ng-model="layerConfig.layer.voronoi.enable"]').uncheck()
+       }
+       else
+       {
+           if(check == null )
+           {
+            console.log(`Error variable CheckboxConfigPV , input 1 or 0`)
+           }
+           else
+           {
+            console.log(`Error variable CheckboxConfigPV ${check}, input 1 or 0`)
+           }
+           
+       }
+       
+    }
 
 }
 
