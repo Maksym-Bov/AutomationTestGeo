@@ -43,3 +43,4 @@ cypress/.dockerfile
 cypress/.dockerIgnore
 .dockerfile
 .dockerIgnore
+.debug.log
