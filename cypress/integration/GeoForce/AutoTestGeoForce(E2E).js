@@ -69,6 +69,23 @@ describe('TestcaseSearch',function()
             .should('contain','Фильтр организаций').click().click()
             
     })
+
+
+    it('Verefication layer Regions', ()=>
+    {
+      
+        
+       Button.ButtonConfigPV()
+       cy.get('#layers').select('Области')
+       cy.get('[form="layerForm"]').click()
+       cy.get('#loader').should('not.be.visible').wait(2000)
+       cy.contains('[ng-click="layerConfig.layer.save();"]','Сохранить')
+       cy.get('[ng-click="layerConfig.layer.save();"]').click()
+       
+
+        
+    })
+
      
     it('Select-region',function()  // выбор областей  ФО
     {
