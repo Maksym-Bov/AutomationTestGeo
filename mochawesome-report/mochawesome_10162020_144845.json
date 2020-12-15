@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-10-16T14:48:42.351Z",
+    "end": "2020-10-16T14:48:45.245Z",
+    "duration": 2894,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4031d4cb-130e-41a0-af56-b69671025526",
+      "title": "",
+      "fullFile": "cypress/integration/Pharma WEB 14/login.spec.js",
+      "file": "cypress/integration/Pharma WEB 14/login.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f0f98ca6-935d-4b85-8898-c550f415ddc3",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login-api",
+              "fullTitle": "MyTestSuite login-api",
+              "timedOut": null,
+              "duration": 1166,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var loginpass = {\n  \"_username\": username,\n  \"_password\": password,\n  \"_target_path\": \"https://demo.pharmahrm.com/test-etms-6.0/ru/etms/grid\",\n  \"_csrf_token\": \"dtx5qciPVQqhVbO4shIKeu3M7r9Et7BiUtoWwSFGCzI\"\n};\ncy.request('POST', 'https://demo.pharmahrm.com/test-etms-6.0/login_check?_locale=ru', loginpass);",
+              "err": {},
+              "uuid": "83eb2658-49dd-4e6b-9391-e978a12fb332",
+              "parentUUID": "f0f98ca6-935d-4b85-8898-c550f415ddc3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "api-tets-search-company",
+              "fullTitle": "MyTestSuite api-tets-search-company",
+              "timedOut": null,
+              "duration": 1371,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var item = {\n  \"search\": typeCompany.apt,\n  \"direction_id\": direction_id,\n  \"user_id\": user_id\n};\nvar items = {\n  \"search\": regionUa.Zhi,\n  \"direction_id\": direction_id,\n  \"user_id\": user_id\n};\ncy.request('POST', 'https://demo.pharmahrm.com/test-etms-6.0/ru/etms/search_companies', item).then(function (response) {\n  expect(response.body[0]).to.have.property('type', 'company');\n});\ncy.request('POST', 'https://demo.pharmahrm.com/test-etms-6.0/ru/etms/search_companies', items).then(function (response) {\n  expect(response.body[0]).to.have.property('type', 'polygon');\n});",
+              "err": {
+                "message": "AssertionError: expected '<' to have property 'type'",
+                "estack": "AssertionError: expected '<' to have property 'type'\n    at Context.eval (eval at <anonymous> (http://localhost:34167/__cypress/runner/cypress_runner.js:175991:16), <anonymous>:174:40)",
+                "diff": null
+              },
+              "uuid": "36d277bf-6d96-4127-b00e-be4024e52379",
+              "parentUUID": "f0f98ca6-935d-4b85-8898-c550f415ddc3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "83eb2658-49dd-4e6b-9391-e978a12fb332"
+          ],
+          "failures": [
+            "36d277bf-6d96-4127-b00e-be4024e52379"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2537,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

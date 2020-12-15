@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-16T14:26:08.461Z",
+    "end": "2020-10-16T14:26:58.614Z",
+    "duration": 50153,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d856f0f-5743-47fa-b71d-13e54e474eef",
+      "title": "",
+      "fullFile": "cypress/integration/learn_test/test chekboxDrop.js",
+      "file": "cypress/integration/learn_test/test chekboxDrop.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9caa39b7-7c42-4c0a-b34b-5c6c23523599",
+          "title": "Suite Name",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Hobbies check boxes",
+              "fullTitle": "Suite Name Hobbies check boxes",
+              "timedOut": null,
+              "duration": 30467,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://demo.automationtesting.in/Register.html\");\ncy.get('#checkbox1').check().should('be.checked').and('have.value', 'Cricket'); //чек боксы по контенту value  по id \ncy.get('#checkbox2').check().should('be.checked').and('have.value', 'Movies');\ncy.get('#checkbox3').check().should('be.checked').and('have.value', 'Hockey');\ncy.get('#checkbox1').uncheck().should('not.be.checked');\ncy.get('#checkbox2').uncheck().should('not.be.checked');\ncy.get('#checkbox3').uncheck().should('not.be.checked');\ncy.get('input[type=checkbox]').check(['Cricket', 'Hockey']); /// чек боксы по контенту value по всем чекбоксам",
+              "err": {},
+              "uuid": "fa5f9673-cbf1-441b-b3de-5835e474dcee",
+              "parentUUID": "9caa39b7-7c42-4c0a-b34b-5c6c23523599",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Skills Drop Down",
+              "fullTitle": "Suite Name Skills Drop Down",
+              "timedOut": null,
+              "duration": 2720,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#Skills').select('Android').should('have.value', 'Android');",
+              "err": {},
+              "uuid": "a1dbf102-902d-4a72-a7bb-176370048495",
+              "parentUUID": "9caa39b7-7c42-4c0a-b34b-5c6c23523599",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Languages Multi Select",
+              "fullTitle": "Suite Name Languages Multi Select",
+              "timedOut": null,
+              "duration": 5234,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#msdd').click();\ncy.get('.ui-corner-all').contains('English').click();\ncy.get('.ui-corner-all').contains('Japanese').click();",
+              "err": {},
+              "uuid": "645b91a2-d572-485d-967c-038194b46291",
+              "parentUUID": "9caa39b7-7c42-4c0a-b34b-5c6c23523599",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Select countries searchable drop down",
+              "fullTitle": "Suite Name Select countries searchable drop down",
+              "timedOut": null,
+              "duration": 1801,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[role=combobox]').click({\n  force: true\n}); // Принудительный щелчок независимо от его активного состояния\ncy.get('.select2-search__field').type('Ind'); // поиск в выпадаещем списке  и ввод текста\ncy.get('.select2-search__field').type('{enter}'); // нажатие ентер на клавиатуре",
+              "err": {},
+              "uuid": "ba153fd1-926e-455a-8031-ac703ebcae7c",
+              "parentUUID": "9caa39b7-7c42-4c0a-b34b-5c6c23523599",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fa5f9673-cbf1-441b-b3de-5835e474dcee",
+            "a1dbf102-902d-4a72-a7bb-176370048495",
+            "645b91a2-d572-485d-967c-038194b46291",
+            "ba153fd1-926e-455a-8031-ac703ebcae7c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

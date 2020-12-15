@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-10-16T14:06:25.514Z",
+    "end": "2020-10-16T14:06:27.591Z",
+    "duration": 2077,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "a5651355-e92d-41ac-9e05-b7c443dcea1f",
+      "title": "",
+      "fullFile": "cypress/integration/learn_test/BEFOREHooksDemo.spec.js",
+      "file": "cypress/integration/learn_test/BEFOREHooksDemo.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ceb6d9e-5606-45c5-b837-0448ba341b37",
+          "title": "MyTestsuit",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "searching",
+              "fullTitle": "MyTestsuit searching",
+              "timedOut": null,
+              "duration": 728,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('******** This is Searching Test ********');",
+              "err": {},
+              "uuid": "eaed6ac9-1478-4e28-b8fe-f0c1cfad32d6",
+              "parentUUID": "7ceb6d9e-5606-45c5-b837-0448ba341b37",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "advanced searching",
+              "fullTitle": "MyTestsuit advanced searching",
+              "timedOut": null,
+              "duration": 401,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('***** This is Searching Test ********');",
+              "err": {},
+              "uuid": "88ca7bc8-f998-4938-9ae4-9f626f88cf89",
+              "parentUUID": "7ceb6d9e-5606-45c5-b837-0448ba341b37",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "listing Products",
+              "fullTitle": "MyTestsuit listing Products",
+              "timedOut": null,
+              "duration": 216,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log('***** This is Searching Test ********');",
+              "err": {},
+              "uuid": "6fdfc9a9-3c7a-48af-9aab-50f542cb89c2",
+              "parentUUID": "7ceb6d9e-5606-45c5-b837-0448ba341b37",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "eaed6ac9-1478-4e28-b8fe-f0c1cfad32d6",
+            "88ca7bc8-f998-4938-9ae4-9f626f88cf89",
+            "6fdfc9a9-3c7a-48af-9aab-50f542cb89c2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1345,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

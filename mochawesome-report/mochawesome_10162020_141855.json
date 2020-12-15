@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-10-16T14:18:54.063Z",
+    "end": "2020-10-16T14:18:55.746Z",
+    "duration": 1683,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "887c94f7-feb2-40a6-98bf-1b3565a69ec6",
+      "title": "",
+      "fullFile": "cypress/integration/learn_test/FixturesDEMO.spec.js",
+      "file": "cypress/integration/learn_test/FixturesDEMO.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6084e87-5e8e-4711-ab1f-17996b2ecfc9",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "FixturesDemoTest",
+              "fullTitle": "MyTestSuite FixturesDemoTest",
+              "timedOut": null,
+              "duration": 1315,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://admin-demo.nopcommerce.com/login');\ncy.get('#Email').clear();\ncy.get('#Email').type(this.data.email);\ncy.get('input[value =admin]').clear();\ncy.get('input[value =admin]').type(this.data.password);\ncy.get('input[type=submit]').click(); // sing in",
+              "err": {
+                "message": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/test\n> cypress/fixtures/test{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `MyTestSuite`",
+                "estack": "Error: A fixture file could not be found at any of the following paths:\n\n> cypress/fixtures/test\n> cypress/fixtures/test{{extension}}\n\nCypress looked for these file extensions at the provided path:\n\n> .json, .js, .coffee, .html, .txt, .csv, .png, .jpg, .jpeg, .gif, .tif, .tiff, .zip\n\nProvide a path to an existing fixture file.\n\nBecause this error occurred during a `before all` hook we are skipping the remaining tests in the current suite: `MyTestSuite`\n    at get (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/lib/errors.js:968:15)\n    at Object.throwErr [as throw] (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/lib/errors.js:986:9)\n    at Object.<anonymous> (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/lib/fixture.js:62:23)\n    at Object.tryCatcher (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/util.js:16:23)\n    at Promise._settlePromiseFromHandler (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/promise.js:547:31)\n    at Promise._settlePromise (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/promise.js:604:18)\n    at Promise._settlePromise0 (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/promise.js:649:10)\n    at Promise._settlePromises (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/promise.js:729:18)\n    at Promise._fulfill (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/promise.js:673:18)\n    at /root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/bluebird/js/release/nodeback.js:42:21\n    at f (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/once/once.js:25:25)\n    at Glob.<anonymous> (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:151:7)\n    at Glob.emit (events.js:223:5)\n    at Glob._finish (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:197:8)\n    at done (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:182:14)\n    at Glob._processSimple2 (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:688:12)\n    at /root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:676:10\n    at Glob._stat2 (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:772:12)\n    at lstatcb_ (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/glob/glob.js:764:12)\n    at RES (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/inflight/inflight.js:31:16)\n    at f (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/once/once.js:25:25)\n    at callback (/root/.cache/Cypress/5.3.0/Cypress/resources/app/packages/server/node_modules/graceful-fs/polyfills.js:289:20)\n    at FSReqCallback.oncomplete (fs.js:158:21)\n",
+                "diff": null
+              },
+              "uuid": "4f9278f1-43cb-4153-99cf-1459e7ae1d04",
+              "parentUUID": "f6084e87-5e8e-4711-ab1f-17996b2ecfc9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4f9278f1-43cb-4153-99cf-1459e7ae1d04"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1315,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

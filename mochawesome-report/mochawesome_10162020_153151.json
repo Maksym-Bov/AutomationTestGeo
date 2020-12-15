@@ -1,0 +1,178 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2020-10-16T15:29:08.683Z",
+    "end": "2020-10-16T15:31:51.907Z",
+    "duration": 163224,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bddcf27b-6b7e-4b27-b516-213e6158b565",
+      "title": "",
+      "fullFile": "cypress/integration/Pharma WEB 14/ver password.js",
+      "file": "cypress/integration/Pharma WEB 14/ver password.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bfb58734-7c1a-4f2e-9061-57406695f580",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Title Of The Page-positve",
+              "fullTitle": "MyTestSuite Verify Title Of The Page-positve",
+              "timedOut": null,
+              "duration": 8004,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://v14.pharmahrm.com/login');\ncy.title().should('eq', 'Welcome!');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://v14.pharmahrm.com/login\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND v14.pharmahrm.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://v14.pharmahrm.com/login\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND v14.pharmahrm.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:34167/__cypress/runner/cypress_runner.js:157710:23\n    at visitFailedByErr (http://localhost:34167/__cypress/runner/cypress_runner.js:157065:12)\n    at http://localhost:34167/__cypress/runner/cypress_runner.js:157709:11\n    at tryCatcher (http://localhost:34167/__cypress/runner/cypress_runner.js:10325:23)\n    at Promise._settlePromiseFromHandler (http://localhost:34167/__cypress/runner/cypress_runner.js:8260:31)\n    at Promise._settlePromise (http://localhost:34167/__cypress/runner/cypress_runner.js:8317:18)\n    at Promise._settlePromise0 (http://localhost:34167/__cypress/runner/cypress_runner.js:8362:10)\n    at Promise._settlePromises (http://localhost:34167/__cypress/runner/cypress_runner.js:8438:18)\n    at _drainQueueStep (http://localhost:34167/__cypress/runner/cypress_runner.js:5032:12)\n    at _drainQueue (http://localhost:34167/__cypress/runner/cypress_runner.js:5025:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:34167/__cypress/runner/cypress_runner.js:5041:5)\n    at Async.drainQueues (http://localhost:34167/__cypress/runner/cypress_runner.js:4911:14)\nFrom Your Spec Code:\n    at Context.eval (eval at <anonymous> (http://localhost:34167/__cypress/runner/cypress_runner.js:175991:16), <anonymous>:101:8)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND v14.pharmahrm.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:60:26)\n  ",
+                "diff": null
+              },
+              "uuid": "841db0f4-2013-41bb-8efa-310ac462e2c7",
+              "parentUUID": "bfb58734-7c1a-4f2e-9061-57406695f580",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter Login",
+              "fullTitle": "MyTestSuite Enter Login",
+              "timedOut": null,
+              "duration": 51491,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#username').type('Administrator').should('have.value', 'Administrator');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#username`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#username`, but never found it.\n    at Context.eval (eval at <anonymous> (http://localhost:34167/__cypress/runner/cypress_runner.js:175991:16), <anonymous>:105:8)",
+                "diff": null
+              },
+              "uuid": "b7ebcfd1-7820-4064-8724-454381560f1b",
+              "parentUUID": "bfb58734-7c1a-4f2e-9061-57406695f580",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Enter password",
+              "fullTitle": "MyTestSuite Enter password",
+              "timedOut": null,
+              "duration": 51112,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#password').type('qweasdf').should('have.value', 'qweasdf');",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#password`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#password`, but never found it.\n    at Context.eval (eval at <anonymous> (http://localhost:34167/__cypress/runner/cypress_runner.js:175991:16), <anonymous>:108:8)",
+                "diff": null
+              },
+              "uuid": "0b9aaf43-608a-4f4b-be91-262b2d8c02f6",
+              "parentUUID": "bfb58734-7c1a-4f2e-9061-57406695f580",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "welcome page",
+              "fullTitle": "MyTestSuite welcome page",
+              "timedOut": null,
+              "duration": 50996,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.btn').click();\ncy.title().should('eq', 'Приветствуем в PharmaHRM');\ncy.get('#user-menu').click();",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `.btn`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `.btn`, but never found it.\n    at Context.eval (eval at <anonymous> (http://localhost:34167/__cypress/runner/cypress_runner.js:175991:16), <anonymous>:111:8)",
+                "diff": null
+              },
+              "uuid": "25cc9f36-bee0-4df7-911c-510c16400667",
+              "parentUUID": "bfb58734-7c1a-4f2e-9061-57406695f580",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "841db0f4-2013-41bb-8efa-310ac462e2c7",
+            "b7ebcfd1-7820-4064-8724-454381560f1b",
+            "0b9aaf43-608a-4f4b-be91-262b2d8c02f6",
+            "25cc9f36-bee0-4df7-911c-510c16400667"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 161603,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}

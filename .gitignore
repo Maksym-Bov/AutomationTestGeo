@@ -20,24 +20,7 @@ mochawesome-report/mochawesome_08272020_123705.json
 mochawesome-report/mochawesome_08272020_125338.json
 mochawesome-report/mochawesome_09162020_162312.json
 mochawesome-report/mochawesome_09162020_162639.json
-cypress.json
-package-lock.json
-package.json
-fixtures/
-examples/
-Test.js
-LoginPage.js
-learn_test/
-Pharma WEB 14/
-plugins/
-screenshots/
-support/
-videos/
-mochawesome-report/
-node_modules/
-cypress.json
-package-lock.json
-package.json
+
 
 cypress/.dockerfile
 cypress/.dockerIgnore

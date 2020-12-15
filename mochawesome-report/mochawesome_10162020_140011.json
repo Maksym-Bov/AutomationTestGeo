@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2020-10-16T13:59:01.141Z",
+    "end": "2020-10-16T14:00:11.249Z",
+    "duration": 70108,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ca14be17-c0a7-4389-9965-8774074a6f61",
+      "title": "",
+      "fullFile": "cypress/integration/learn_test/Alerts.js",
+      "file": "cypress/integration/learn_test/Alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d5232a30-8db2-4f51-b24c-f5bad13f352b",
+          "title": "MyTestSuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Alerts",
+              "fullTitle": "MyTestSuite Alerts",
+              "timedOut": null,
+              "duration": 54206,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://mail.rediff.com/cgi-bin/login.cgi');\ncy.get('input[type=submit]').click();\ncy.on('window:alert', function (str) {\n  expect(str).to.equal('Please enter a valid user name');\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `input[type=submit]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `input[type=submit]`, but never found it.\n    at Context.eval (https://mail.rediff.com/__cypress/tests?p=cypress/integration/learn_test/Alerts.js:103:8)",
+                "diff": null
+              },
+              "uuid": "4e265d48-0fe3-48de-a1e4-1c31290c17ed",
+              "parentUUID": "d5232a30-8db2-4f51-b24c-f5bad13f352b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4e265d48-0fe3-48de-a1e4-1c31290c17ed"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 54206,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyyy_HHMMss"
+      },
+      "version": "5.1.0"
+    }
+  }
+}
