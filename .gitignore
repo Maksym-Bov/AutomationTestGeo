@@ -21,10 +21,11 @@ mochawesome-report/mochawesome_08272020_125338.json
 mochawesome-report/mochawesome_09162020_162312.json
 mochawesome-report/mochawesome_09162020_162639.json
 
-
+package-lock.json
 cypress/.dockerfile
 cypress/.dockerIgnore
 .dockerfile
 .dockerIgnore
 cypress/.debug.log
 cypress/.core
+
