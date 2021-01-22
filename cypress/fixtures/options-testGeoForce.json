@@ -5,7 +5,7 @@
 
     "url" : "https://demo.pharmahrm.com/test-etms-7.0/ru/etms/grid",
 
-    "ApiUrl" :"https://etms.pharmahrm.com/",
+    "ApiUrl" :"https://demo.pharmahrm.com/test-etms-7.0/ru/",
 
     "ApiAuthorization":"Basic Z2VvbWFya2V0aW5nOmdlb21hcmtldGluZ3Bhc3MxMTI=",
 
@@ -13,7 +13,7 @@
 
     "country" : "ua",
 
-    "Direction_Id" : 65,
+    "Direction_Id" : 52,
 
     "User_Id" : 676,
 

@@ -76,7 +76,9 @@ describe('TestcaseSearch',function()
       
         
        Button.ButtonConfigPV()
+       Button.CheckboxConfigPV(0)
        cy.get('#layers').select('Области')
+      // cy.get('label.filter-item > .ng-pristine')
        cy.get('[form="layerForm"]').click()
        cy.get('#loader').should('not.be.visible').wait(2000)
        cy.contains('[ng-click="layerConfig.layer.save();"]','Сохранить')
@@ -89,6 +91,13 @@ describe('TestcaseSearch',function()
      
     it('Select-region',function()  // выбор областей  ФО
     {
+        
+        cy.get('#layerHeading').should('be.visible')
+        .should('contain','Слои').click()
+
+        cy.get('#filtersHeading').should('be.visible')
+        .should('contain','Фильтр организаций').click()
+
         cy.get('[for="filtersRegions"]').should('contain','Области')
 
         cy.get('[data-id=filtersRegions]').click()

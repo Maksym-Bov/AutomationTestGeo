@@ -28,4 +28,16 @@ cypress/.dockerIgnore
 .dockerIgnore
 cypress/.debug.log
 cypress/.core
+fixtures
+
+integration/examples
+integration/learn_test
+plugins
+screenshots
+support
+videos
+mochawesome-report
+cypress.json
+debug
+package 
 

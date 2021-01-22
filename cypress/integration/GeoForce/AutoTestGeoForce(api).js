@@ -83,7 +83,7 @@ describe('TestcaseSearch',function()
                     expect(response.status).to.eq('пустой обьект')
                 }
                 expect(response.status).to.eq(200)
-                let direction = (Object.values(response)[0][0].direction_id);
+               direction = (Object.values(response)[0][0].direction_id);
                 expect(direction).to.eq(this.data.Direction_Id)                                                         
             }) 
     })
@@ -139,6 +139,7 @@ describe('TestcaseSearch',function()
             if(month == 1 || month == 2 || month == 3 )
             {
                 month = month + 12
+                year = year - 1 
             }
             month = month - 3;
             let date = `${year}-${month}`;
